@@ -19,10 +19,6 @@ body {
   max-width: 992px;
 }
 
-main div {
-  background-color: #3C4C25;
-}
-
 .header {
   position: relative;
   height: 330px;
@@ -48,6 +44,55 @@ main div {
   padding: 0.3rem 0.45rem;
   transition: 0.5s;
   text-shadow: 0 1px #3C4C25;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0px;
+}
+.timer__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 350px;
+  border: 2px solid #3C4C25;
+  border-radius: 8px;
+  padding: 4rem;
+}
+.timer__btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 4rem 0;
+}
+.timer__btn {
+  width: 25%;
+  border: none;
+}
+.timer__btn:hover {
+  background-color: violet;
+}
+.timer__btn:focus {
+  color: chartreuse;
+}
+
+br {
+  color: #3C4C25;
+  background-color: blue;
+}
+
+.footer {
+  font-size: 1.6rem;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  padding: 2rem;
 }
 
 @media (min-width: 768px) {
