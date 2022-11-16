@@ -91,7 +91,12 @@ body{
     border: 2px solid #3C4C25;
     border-radius: 8px;
     padding: 4rem;
+
+
+    border-image: url("../Ellipse 1.svg");
   }
+
+
 
   &__pulpit {
 
@@ -120,6 +125,25 @@ body{
   }
 }
 
+// SHAPES
+
+.tomato {
+
+  &__body{
+    background-color: #CB3528;
+
+    display: block;
+    width: 126px;
+    height: 180px;
+
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+
+  }
+  &__lives {
+    background-color: #3C4C25;
+  }
+
+}
 
 
 
