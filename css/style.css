@@ -60,10 +60,21 @@ body {
   flex-direction: column;
   width: 350px;
   height: 350px;
-  border: 2px solid #3C4C25;
-  border-radius: 8px;
+  border: 2px solid white;
+  box-shadow: 2px -2px #3C4C25;
+  border-radius: 50%;
   padding: 4rem;
-  border-image: url("../Ellipse 1.svg");
+}
+.timer__display {
+  background-color: #CB3528;
+  padding: 1rem;
+  border: 2px solid #fff;
+  border-radius: 4px;
+}
+.timer__display-text {
+  font-size: 6rem;
+  font-family: "Electrolize", sans-serif;
+  color: white;
 }
 .timer__btns {
   display: flex;
@@ -73,25 +84,18 @@ body {
   padding: 4rem 0;
 }
 .timer__btn {
+  padding: 0.5rem;
   width: 25%;
   border: none;
+  border: 2px solid #fff;
+  background-color: none;
+  border-radius: 4px;
 }
 .timer__btn:hover {
   background-color: violet;
 }
 .timer__btn:focus {
   color: chartreuse;
-}
-
-.tomato__body {
-  background-color: #CB3528;
-  display: block;
-  width: 126px;
-  height: 180px;
-  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
-}
-.tomato__lives {
-  background-color: #3C4C25;
 }
 
 br {
