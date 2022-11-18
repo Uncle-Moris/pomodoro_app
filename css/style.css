@@ -70,6 +70,8 @@ body {
   padding: 1rem;
   border: 2px solid #fff;
   border-radius: 4px;
+  text-align: center;
+  width: 70%;
 }
 .timer__display-text {
   font-size: 6rem;
