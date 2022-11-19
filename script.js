@@ -14,10 +14,9 @@ footerYear.textContent = `${new Date().getFullYear()}`
 let countTime;
 let minutes = 25;
 let seconds = 0;
-
+display.textContent = `${minutes}:0${seconds}`
 
 const timerStart = () => {
-    display.textContent = `${minutes}:0${seconds}`
     countTime = setInterval(() => {
         if (seconds === 0) {
             minutes--
@@ -29,8 +28,10 @@ const timerStart = () => {
         } else if (seconds <= 9) {
             seconds--
             display.textContent = `${minutes}:0${seconds}`
+        } else if (minutes === 0 && seconds === 0 ) {
+            clearInterval(countTime)
         }
-    }, 1000)
+    }, 100)
 
 }
 
