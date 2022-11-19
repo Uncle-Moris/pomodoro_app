@@ -98,6 +98,11 @@ body {
 .timer__btn:active {
   color: chartreuse;
 }
+.timer__btn i {
+  font-size: 1.2rem;
+  color: #CB3528;
+  z-index: 100;
+}
 
 .active {
   background-color: pink;

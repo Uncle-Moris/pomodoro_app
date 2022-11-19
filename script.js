@@ -7,20 +7,34 @@ const btnBrake = document.querySelector('.timer__btn-brake')
 const display = document.querySelector('.timer__display-text')
 
 
-
-
 const footerYear = document.querySelector('.footer span')
 footerYear.textContent = `${new Date().getFullYear()}`
 
 
-const btnAll= document.querySelectorAll('.timer__btn')
-
-const n1 = '1'
-const n2 = '2'
-const n3 = '3'
-const n4 = '4'
+let countTime;
+let minutes = 25;
+let seconds = 0;
 
 
-display.textContent = `${n1}${n2}:${n3}${n4}`
+const timerStart = () => {
+    display.textContent = `${minutes}:0${seconds}`
+    countTime = setInterval(() => {
+        if (seconds === 0) {
+            minutes--
+            seconds = 59
+            display.textContent = `${minutes}:${seconds}`
+        } else if (seconds <= 59 && seconds > 9) {
+            seconds--
+            display.textContent = `${minutes}:${seconds}`
+        } else if (seconds <= 9) {
+            seconds--
+            display.textContent = `${minutes}:0${seconds}`
+        }
+    }, 1000)
 
+}
+
+
+
+btnStart.addEventListener('click', timerStart)
 
