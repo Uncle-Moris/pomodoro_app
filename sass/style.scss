@@ -66,9 +66,6 @@ body{
     }
 }
 
-
-
-
 .timer {
   display: flex;
   justify-content: center;
@@ -98,7 +95,7 @@ body{
     border: 2px solid #fff ;
     border-radius: 4px;
     text-align: center;
-    width: 70%;
+    width: 80%;
     &-text {
       font-size: 6rem;
       font-family: 'Electrolize', sans-serif;
