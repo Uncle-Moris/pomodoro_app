@@ -14,61 +14,38 @@ footerYear.textContent = `${new Date().getFullYear()}`
 let countTime;
 let minutes = 25;
 let seconds = 0;
-display.textContent = `${minutes}:0${seconds}`
+display.textContent = `${25}:0${0}`
 
-const timerStart = () => {
+const timer = (min, sec) => {
+    display.textContent = `${min}:0${sec}`
     clearInterval(countTime)
-    minutes = 25
-    seconds = 0
+    minutes = min
+    seconds = sec
     countTime = setInterval(() => {
-        if (seconds === 0) {
-            minutes--
-            seconds = 59
-            display.textContent = `${minutes}:${seconds}`
-        } else if (seconds <= 59 && seconds > 9) {
-            seconds--
-            display.textContent = `${minutes}:${seconds}`
-        } else if (seconds <= 9) {
-            seconds--
-            display.textContent = `${minutes}:0${seconds}`
-        } else if (minutes == 0 && seconds == 0 ) {
+        if (display.textContent === '0:00') {
             clearInterval(countTime)
+
+            console.log( minutes, seconds)
+        } else if (sec === 0) {
+            min--
+            sec = 59
+            display.textContent = `${min}:${sec}`
+        } else if (seconds <= 59 && sec > 9) {
+            sec--
+            display.textContent = `${min}:${sec}`
+        } else if (sec <= 9) {
+            sec--
+            display.textContent = `${min}:0${sec}`
         }
-    }, 100)
-
-}
-
-const timerBrake = () => {
-    clearInterval(countTime)
-    minutes = 5
-    seconds = 0
-    countTime = setInterval(() => {
-
-        if (seconds === 0) {
-            minutes--
-            seconds = 59
-            display.textContent = `${minutes}:${seconds}`
-        } else if (seconds <= 59 && seconds > 9) {
-            seconds--
-            display.textContent = `${minutes}:${seconds}`
-        } else if (seconds <= 9) {
-            seconds--
-            display.textContent = `${minutes}:0${seconds}`
-        } else if ((seconds === 0 && minutes === 0)
-            || display.value === '0:00'
-            || display.textContent === '0:00') {
-            console.log('stop')
-            clearInterval(countTime)
-        }
-        console.log(minutes, seconds)
     }, 1000)
 }
+
 
 const timerStop = () => {
     clearInterval(countTime)
 }
 
 
-btnStart.addEventListener('click', timerStart)
+btnStart.addEventListener('click', () => timer(25,0))
+btnBrake.addEventListener('click', () => timer(5,0))
 btnStop.addEventListener('click', timerStop)
-btnBrake.addEventListener('click', timerBrake)

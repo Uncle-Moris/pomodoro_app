@@ -63,6 +63,7 @@ body{
       padding: .3rem .45rem;
       transition: .5s;
       text-shadow: 0 1px #3C4C25;
+      cursor: pointer;
     }
 }
 
@@ -105,23 +106,23 @@ body{
 
   &__btns {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     width: 100%;
+    justify-content: space-between;
+    align-items: center;
     padding: 4rem 0;
   }
   &__btn {
-    padding: .5rem;
+    padding: 1rem;
     width: 25%;
     border: none;
-    border: 2px solid #fff ;
     border-radius: 4px;
-    &:hover {
-      background-color: violet;
+
+    box-shadow: inset 0px 5px 5px 0px rgba(0,0,0, .5);
+    &:hover, &:active, &:focus  {
+      transform: translate(5px ,5px);
+      box-shadow: inset 0px 10px 10px 2px rgba(0,0,0, .25);
     }
-    &:active {
-      color: chartreuse;
-    }
+
     i {
       font-size: 1.2rem;
       color: #CB3528;
