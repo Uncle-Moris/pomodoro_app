@@ -49,3 +49,12 @@ const timerStop = () => {
 btnStart.addEventListener('click', () => timer(25,0))
 btnBrake.addEventListener('click', () => timer(5,0))
 btnStop.addEventListener('click', timerStop)
+
+
+let userTime = Date('0 0 25 0');
+const setTime = () => {
+    let currentTime = new Date()
+
+    cnst
+}
+setInterval(setTime, 1000)
