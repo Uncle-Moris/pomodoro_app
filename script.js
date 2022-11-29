@@ -57,4 +57,5 @@ const setTime = () => {
 
     cnst
 }
+const m = new Date().mi
 setInterval(setTime, 1000)
