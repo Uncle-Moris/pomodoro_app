@@ -10,6 +10,11 @@ const display = document.querySelector('#timer')
 const footerYear = document.querySelector('.footer span')
 footerYear.textContent = `${new Date().getFullYear()}`
 
+const content = {
+    whatIsPomodoro : 'The Pomodoro Technique involves setting a timer for a specific amount of time and working uninterrupted during that period, followed by a short break. This technique is used to improve productivity and focus by breaking work into manageable blocks.',
+    mediaLink : "If you like this projects luck for more here"
+}
+
 
 let countTime;
 let minutes = 2;
